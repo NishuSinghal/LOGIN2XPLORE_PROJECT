@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Enrollment Form</title>
+   
+
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+	<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300' rel='stylesheet' type='text/css'>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container mt-5 ">
+        <h1>Student Enrollment Form</h1>
+
+        <form id="student-enrollment" class="mt-5">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="rollNo">Roll-No</label>
+                    <input type="number" class="form-control" id="rollNo" placeholder="Roll No"
+                        min='1' onchange="getStudentData()">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="fullName">Full-Name</label>
+                    <input type="text" class="form-control" id="fullName"
+                        placeholder="Full Name" disabled>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="class">Class</label>
+                    <input type="text" class="form-control" id="class" placeholder="Class"
+                        disabled>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="birthDate"> Birth-Date</label>
+                    <input type="date" class="form-control" id="birthDate" disabled>
+                </div>
+            </div>
+            <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="inputAddress">Address</label>
+                <input type="text" class="form-control" id="inputAddress"
+                    placeholder="1234 Main St" disabled>
+            </div>
+            
+                <div class="form-group col-md-6">
+                    <label for="enrollmentDate">Enrollment-Date</label>
+                    <input type="date" class="form-control" id="enrollmentDate" disabled>
+                </div>
+            </div>
+            
+            <div class='container btn-continer ' style="align-items: center">
+
+                <button type="button" class="btn btn-primary" id='saveBtn' onclick="saveData()"
+                    disabled>Save </button>
+                <button type="button" class="btn btn-primary" id='updateBtn'
+                    onclick="changeData()" disabled>Update</button>
+                <button type="button" class="btn btn-primary" id='resetBtn'
+                    onclick="resetForm()" disabled>Reset</button>
+            </div>
+        </form>
+    </div>
+    <script type='text/javascript' src="https://login2explore.com/jpdb/resources/js/0.0.3/jpdb-commons.js"></script>
+	<script type='text/javascript' src="index.js"></script>
+</body>
+</html>
